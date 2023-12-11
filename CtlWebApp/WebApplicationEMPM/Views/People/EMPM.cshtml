@@ -1,0 +1,132 @@
+﻿@model WebApplicationEMPM.Models.AddNewPersonViewModel
+@{
+
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" ,initial-scale="1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/persian-datepicker@latest/dist/css/persian-datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/EMPM.css" />
+    <title>EMPM Menu</title>
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="#" onclick="location.href='@Url.Action("Index","Home")'">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a asp-controller="People" asp-action="List">List</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+    <form asp-action="EMPM" asp-controller="People"
+          method="post"
+          enctype="multipart/form-data">
+        <div asp-validation-summary="All"></div>
+        <div class="divmove">
+            <div class="form" id="fn">
+                <label asp-for="FirstName" class="exampleFormControlInput1">Name</label>
+                <input type="text" asp-for="FirstName" class="form-control" placeholder="FirstName" maxlength="30" />
+
+                <span asp-validation-for="FirstName"></span>
+            </div>
+        </div>
+        <div class="divlastname">
+            <div class="form" id="ln">
+                <label asp-for="LastName" class="exampleFormControlInput1">LastName</label>
+                <input type="text" asp-for="LastName" class="form-control" placeholder="LastName " maxlength="50" />
+
+                <span asp-validation-for="LastName"></span>
+            </div>
+        </div>
+        <div class="divimg">
+            <div class="formimg" id="img">
+                <input type="file" asp-for="Image" class="form__inputimg" placeholder=" " />
+                <span asp-validation-for="Image"></span>
+            </div>
+        </div>
+        <div class="divemail">
+            <div class="form" id="Email">
+                <label asp-for="Email" class="exampleFormControlInput1">Email</label>
+                <input type="email" asp-for="Email" class="form-control" placeholder="Email " />
+
+                <span asp-validation-for="Email"></span>
+            </div>
+        </div>
+        <div class="divbirthdate">
+            <div class="form" id="Birthdate">
+                <label asp-for="BirthDate" class="exampleFormControlInput1">Birthdate</label>
+                <input type="text" asp-for="BirthDate" class="example1 form-control" placeholder="BirthDate " maxlength="40" />
+
+                <span asp-validation-for="BirthDate"></span>
+            </div>
+        </div>
+        <div class="divpalceofbirth">
+            <div class="form" id="PlaceOfBirht">
+                <label asp-for="BirthPlace" class="exampleFormControlInput1">PlaceOfBirht</label>
+                <input type="text" asp-for="BirthPlace" class="form-control" placeholder="BirthPlace " maxlength="150" />
+
+                <span asp-validation-for="BirthPlace"></span>
+            </div>
+        </div>
+        <div class="divphonenumber">
+            <div class="form" id="PhoneNumber">
+                <label asp-for="PhoneNumber" class="exampleFormControlInput1">PhoneNumber</label>
+                <input type="text" asp-for="PhoneNumber" class="form-control" placeholder="PhoneNumber " maxlength="11" />
+
+                <span asp-validation-for="PhoneNumber"></span>
+            </div>
+        </div>
+        <div class="divNameOfFather">
+            <div class="form" id="NameOfFather">
+                <label asp-for="NameOfFather" class="exampleFormControlInput1">NameOfFather</label>
+                <input type="text" asp-for="NameOfFather" class="form-control" placeholder="NameOfFather " maxlength="40" />
+
+                <span asp-validation-for="NameOfFather"></span>
+            </div>
+        </div>
+        <div class="divphonehome">
+            <div class="form" id="NationalCode">
+                <label asp-for="NationalCode" class="exampleFormControlInput1">NationalCode</label>
+                <input type="text" asp-for="NationalCode" class="form-control" placeholder="NationalCode " maxlength="11" />
+
+                <span asp-validation-for="NationalCode"></span>
+            </div>
+        </div>
+        <div class="divgender">
+            <div class="divselectgrndr" id="gender">
+                <select class="selectg" asp-for="gender" asp-items="Html.GetEnumSelectList<CtlWebApp.Contract.Genders>()">
+                </select>
+            </div>
+        </div>
+        <div class="divmartial">
+            <div class="divselectgrndr" id="martial">
+                <select class="selectg" asp-for="Martial" asp-items="Html.GetEnumSelectList<CtlWebApp.Contract.Martials>()">
+                </select>
+            </div>
+        </div>
+        <button type="submit"><span class="spansub"></span>Next</button>
+    </form>
+    <script src="~/js/site.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/persian-date@latest/dist/persian-date.min.js"></script>
+    <script src="https://unpkg.com/persian-datepicker@latest/dist/js/persian-datepicker.min.js"></script>
+    <script src="~/lib/jquery.unobtrusive-ajax.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".example1").pDatepicker({
+                initialValueType: "gregorian",
+                format: "YYYY/MM/DD",
+                onSelect: "year"
+            });
+        });
+    </script>
+
+
+</body>
+</html>

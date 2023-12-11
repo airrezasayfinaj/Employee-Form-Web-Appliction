@@ -1,0 +1,57 @@
+﻿@model List<CtlWebApp.Core.People.Person>
+@{
+    ViewData["Title"] = "List";
+}
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" ,initial-scale="1.0" />
+        <link rel="stylesheet" href="~/css/List.css" />
+        <title>side menu</title>
+    </head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a asp-controller="People" asp-action="EMPM">EMPM</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a asp-controller="People" asp-action="Index">Home</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+        <div class="filter">
+
+        </div>
+                @if (Model != null && Model.Count > 0)
+                 {
+                    <table class="content_tbl">
+                        <tr>
+                            <td>id</td>
+                            <td>FirstName</td>
+                            <td>LastName</td>
+                            <td>Email</td>
+                            <td>Detail</td>
+                            <td>Delete</td>
+                        </tr>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.FirstName</td>
+                                <td>@item.LastName</td>
+                                <td>@item.Email</td>
+                                <td>@Html.ActionLink("Detail", "Edit", new { id = item.Id })</td>
+                                <td>@Html.ActionLink("Delete", "Delete", new { id = item.Id })</td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                 }
+</body>
+</html>

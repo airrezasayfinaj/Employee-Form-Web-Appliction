@@ -1,0 +1,61 @@
+﻿.form__inputimg {
+    display: none;
+}
+
+.form__lableimg {
+    color: black;
+    height: 40px;
+    width: 170px;
+    background-color: #D3066D;
+    position: absolute;
+    margin: auto;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.divselectgrndr {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: #1a1f21;
+    overflow: hidden;
+    border-radius: .25em;
+}
+
+    .divselectgrndr::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0 1em;
+        background-color: #1a1f21;
+        cursor: pointer;
+        pointer-events: none;
+        transition: .25s all ease;
+    }
+
+    .divselectgrndr:hover::after {
+        color: black;
+    }
+
+.selectg {
+    -moz-appearance: none;
+    -ms-progress-appearance: inherit;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #1a1f21;
+    background-image: none;
+    flex: 1;
+    padding: 0 .5em;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+}

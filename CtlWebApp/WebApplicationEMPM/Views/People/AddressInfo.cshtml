@@ -1,0 +1,102 @@
+﻿@model WebApplicationEMPM.Models.AddNewAddressInfoModel
+@{
+
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" ,initial-scale="1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/persian-datepicker@latest/dist/css/persian-datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/EMPM.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $("#selstate").on('change', function () {
+            document.getElementById("slecity").value = this.value;
+            console.log($("#box2").val());
+        });
+        $("#slecity").on('change', function () {
+            document.getElementById("selstate").value = this.value;
+        });
+    </script>
+    <title>AddressInfo Menu</title>
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="#" onclick="location.href='@Url.Action("Index","Home")'">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a asp-controller="People" asp-action="List">List</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+    <form asp-action="AddressInfo" asp-controller="People"
+           method="post"
+          enctype="multipart/form-data">
+
+        <input asp-for="Id" id="StudentId"
+               name="StudentId"
+               type="hidden"
+               value="@Model.Id" />
+        <div class="form" id="Address">
+            <label asp-for="Address" class="exampleFormControlInput1">Address</label>
+            <input type="text" asp-for="Address" class="form-control" placeholder="Address" maxlength="150" />
+
+            <span asp-validation-for="Address"></span>
+        </div>
+
+
+        <div class="form" id="Street">
+            <label asp-for="Street" class="exampleFormControlInput1">Street</label>
+            <input type="text" asp-for="Street" class="example1 form-control" placeholder="Street " maxlength="70" />
+
+            <span asp-validation-for="Street"></span>
+        </div>
+
+
+        <div class="form" id="Avenue">
+            <label asp-for="Avenue" class="exampleFormControlInput1">Avenue</label>
+            <input type="text" asp-for="Avenue" class="example1 form-control" placeholder="Avenue " maxlength="40" />
+
+            <span asp-validation-for="Avenue"></span>
+        </div>
+
+
+        <div class="form" id="Number">
+            <label asp-for="Number" class="exampleFormControlInput1">Number</label>
+            <input type="text" asp-for="Number" class="example1 form-control" placeholder="Number " maxlength="7" id="numberer" />
+
+            <span asp-validation-for="Number"></span>
+        </div>
+
+
+        <div class="divselectgrndr" id="state">
+            <select class="selectg" name="SelectedState" id="selstate">
+                @foreach (var item in ViewBag.State)
+                {
+                    <option selected disabled>استان</option>
+                    <option class="options" id="option" value="@item.Id">@item.Name</option>
+                }
+            </select>
+        </div>
+
+
+        <div class="divselectgrndr" id="city">
+            <select class="selectg" name="SelectedCity" id="slecity">
+                @foreach (var item in ViewBag.City)
+                {
+                    <option selected disabled>شهر</option>
+                    <option class="options" id="option" value="@item.Id">@item.Name</option>
+                }
+            </select>
+        </div>
+
+        <button type="submit"><span class="spansub"></span>Next</button>
+    </form>
+
+
+</body>
+</html>

@@ -1,0 +1,598 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: Signika;
+
+}
+body {
+    background:linear-gradient(-135deg, #c850c0,#4158d0);
+    display: flex;
+    overflow-x: hidden;
+}
+.navbar {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-top: 50px;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+    .navbar ul li a {
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        display: flex;
+        position: relative;
+        left: 10px;
+    }
+
+    .navbar ul li::after {
+        content: '';
+        height: 3px;
+        width: 0;
+        background: #009688;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.5s;
+    }
+
+    .navbar ul li:hover::after {
+        width: 100%;
+    }
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span {
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span {
+    width: 100%;
+}
+
+button:hover {
+    border: none;
+}
+.divselectgrndr {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: #1a1f21;
+    overflow: hidden;
+    border-radius: .25em;
+}
+
+    .divselectgrndr::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0 1em;
+        background-color: #1a1f21;
+        cursor: pointer;
+        pointer-events: none;
+        transition: .25s all ease;
+    }
+
+    .divselectgrndr:hover::after {
+        color: black;
+    }
+
+.selectg {
+    -moz-appearance: none;
+    -ms-progress-appearance: inherit;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #1a1f21;
+    background-image: none;
+    flex: 1;
+    padding: 0 .5em;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+    .selectg::-ms-expand {
+        display: none;
+    }
+
+
+/*.divmove {
+
+    right: 500px;
+    position: absolute;
+    left: 1000px;
+    top: 250px;
+}
+
+.divlastname {
+
+    right: 500px;
+    position: absolute;
+    left: 600px;
+    top: 250px;
+}
+
+.divimg {
+
+    position: absolute;
+    left: 900px;
+    bottom: 485px;
+}*/
+
+.formimg {
+    position: relative;
+    width: 15rem;
+    height: 2rem;
+}
+
+/*.divemail {
+
+    position: absolute;
+    left: 202px;
+    bottom: 390px
+}
+
+.divbirthdate {
+
+    position: absolute;
+    left: 1000px;
+    bottom: 320px;
+}
+
+.divpalceofbirth {
+
+    position: absolute;
+    left: 600px;
+    bottom: 320px;
+}
+
+.divphonenumber {
+
+    position: absolute;
+    left: 202px;
+    bottom: 320px;
+}
+
+.divNameOfFather {
+
+    position: absolute;
+    left: 1000px;
+    bottom: 255px;
+}
+
+.divgender {
+
+    position: absolute;
+    bottom: 255px;
+    left: 602px;
+}
+
+.divmartial {
+
+    position: absolute;
+    bottom: 255px;
+    left: 200px;
+}
+
+.divaddress {
+
+    position: absolute;
+    bottom: 10px;
+    left:202px;
+}
+
+.divdateofdispatch {
+    position: absolute;
+    top: 950px;
+    left: 202px;
+}
+
+.divaddressstateofwazifa {
+    position: absolute;
+    bottom: -370px;
+    left: 602px;
+}
+
+.diveducationplace {
+
+    position: absolute;
+    bottom: -220px;
+    left: 202px;
+}
+
+.divtotalvarage {
+    position: absolute;
+    bottom: -220px;
+    left: 1002px;
+}
+
+.divdatereciv {
+    position: absolute;
+    bottom: -150px;
+    left: 202px;
+}
+
+.divorent {
+    position: absolute;
+    bottom: -150px;
+    left: 602px;
+}
+
+.divfeildstudy {
+    position: absolute;
+    bottom: -150px;
+    left: 1002px;
+}
+
+.divevidance {
+    position: absolute;
+    bottom: -220px;
+    left: 602px;
+}
+
+.divstate {
+
+    position: absolute;
+    bottom: 10px;
+    left: 1000px;
+}
+
+.divcity {
+    position: absolute;
+    bottom: 10px;
+    left: 602px;
+}
+
+.divbirthcertificate {
+
+    position: absolute;
+    bottom: -370px;
+    left: 202px;
+}
+
+.divrelesedate {
+
+    position: absolute;
+    bottom: -370px;
+    left: 1002px;
+}
+
+.divphonehome {
+    position: absolute;
+    bottom: -520px;
+    left: 202px;
+}
+
+.divverfication {
+    position: absolute;
+    bottom: -520px;
+    left: 1002px;
+}
+
+.divaccept {
+
+    position: absolute;
+    bottom: -520px;
+    left: 602px;
+}
+
+.divworkname {
+
+    position: absolute;
+    bottom: -580px;
+    left: 202px;
+}
+
+.divjobtittel {
+    position: absolute;
+    bottom: -580px;
+    left: 1002px;
+}
+
+.divstartdate {
+    position: absolute;
+    bottom: -580px;
+    left: 602px;
+}
+
+.divenddate {
+
+    position: absolute;
+    bottom: -640px;
+    left: 202px;
+}
+
+.divlastright {
+
+    position: absolute;
+    bottom: -640px;
+    left: 1002px;
+}
+
+.divReasonForLeavingServeices {
+
+    position: absolute;
+    bottom: -640px;
+    left: 602px;
+}
+
+.divskill {
+
+    position: absolute;
+    bottom: -700px;
+    left: 202px;
+}
+.divStreet{
+    position:absolute;
+    bottom:70px;
+    left:1000px;
+}
+.divAvenue{
+
+    position:absolute;
+    bottom:70px;
+    left:600px;
+}
+.divNumber{
+
+    position:absolute;
+    bottom:70px;
+    left:202px;*/
+}
+.form__inputimg {
+    display: none;
+}
+
+.form__lableimg {
+    color: black;
+    height: 40px;
+    width: 170px;
+    background-color: #D3066D;
+    position: absolute;
+    margin: auto;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.pwt-btn-calendar {
+    display: none !important;
+}
+
+/*.form {
+    position: relative;
+    width: 20rem;
+    height: 3rem;
+}
+
+.form__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    border: 2px solid #000000;
+    border-radius: 0.5rem;
+    color: black;
+    outline: none;
+    padding: 1.25rem;
+    background: none;
+    font-size: 1.2rem;
+}
+
+    .form__input:hover {
+        border-color: #adffff;
+    }
+
+    .form__input:focus {
+        border-color: #18ffff;
+    }
+
+.form__lable {
+    position: absolute;
+    left: 1rem;
+    top: 0.8rem;
+    padding: 0 0.5rem;
+    color: black;
+    cursor: text;
+    transition: top 200ms ease-in,left 200ms ease-in,font-size 200ms ease-in;
+    background-color: #434f5a;
+}
+
+.form__input:focus ~ .form__lable, .form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__lable {
+    top: -0.5rem;
+    font-size: 0.8rem;
+    left: 0.8rem;
+}
+
+.buttonsub {
+    width: 125px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-size: 16px;
+}
+
+.spansub {
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.buttonsub:hover .spansub {
+    width: 100%;
+}
+
+.buttonsub:hover {
+    border: none;
+}
+
+.divsub {
+
+    position: absolute;
+    bottom: -730px;
+    left: 1180px;
+}
+.divaddsub {
+    position: absolute;
+    bottom: -105px;
+    left: 970px;
+}
+
+.rectpersoninfo {
+    position: relative;
+    top: 10px;
+    left: 1020px;
+    transform: skew(-10deg);
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(-135deg, #c850c0,#4158d0);
+    cursor: pointer;
+}
+
+.liner {
+    width: 1150px;
+    height: 1px;
+    background-color: black;
+    display: flex;
+    position: absolute;
+    left: 160px;
+    bottom: 240px;
+}
+
+.linerx {
+    width: 1150px;
+    height: 1px;
+    background-color: black;
+    display: flex;
+    position: absolute;
+    left: 160px;
+    bottom: -5px;
+}
+
+.rectaddress {
+    position: absolute;
+    bottom: 170px;
+    left: 1140px;
+    transform: skew(-10deg);
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(-135deg, #c850c0,#4158d0);
+    cursor: pointer;
+}
+
+.recteducation {
+    position: absolute;
+    bottom: -80px;
+    left: 1140px;
+    transform: skew(-10deg);
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(-135deg, #c850c0,#4158d0);
+    cursor: pointer;
+}
+
+.linery {
+    width: 1150px;
+    height: 1px;
+    background-color: black;
+    display: flex;
+    position: absolute;
+    left: 160px;
+    bottom: -240px;
+}
+
+.rectService {
+    position: absolute;
+    bottom: -300px;
+    left: 1140px;
+    transform: skew(-10deg);
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(-135deg, #c850c0,#4158d0);
+    cursor: pointer;
+}
+
+.linerz {
+    width: 1150px;
+    height: 1px;
+    background-color: black;
+    display: flex;
+    position: absolute;
+    left: 160px;
+    bottom: -390px;
+}
+
+.resume {
+    position: absolute;
+    bottom: -460px;
+    left: 1140px;
+    transform: skew(-10deg);
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(-135deg, #c850c0,#4158d0);
+    cursor: pointer;
+}
+.tablediv{
+    display:flex;
+    position:absolute;
+    top:800px;
+}*/

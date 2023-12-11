@@ -1,0 +1,128 @@
+﻿@model WebApplicationEMPM.Models.AddNewResumeModel
+@{
+
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" ,initial-scale="1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/persian-datepicker@latest/dist/css/persian-datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/EMPM.css" />
+    <title>Resume Menu</title>
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="#" onclick="location.href='@Url.Action("Index","Home")'">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a asp-controller="People" asp-action="List">List</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+    <form asp-action="Resume" asp-controller="People"
+          method="post"
+          enctype="multipart/form-data">
+
+        <input asp-for="Id" id="StudentId"
+               name="StudentId"
+               type="hidden"
+               value="@Model.Id" />
+        
+        <div class="divverfication">
+            <div class="form" id="verfi">
+                <label asp-for="VerficationCode" class="exampleFormControlInput1">VerficationCode</label>
+                <input type="text" asp-for="VerficationCode" class="form-control" placeholder="VerficationCode " maxlength="10" />
+
+                <span asp-validation-for="VerficationCode"></span>
+            </div>
+        </div>
+        <div class="divaccept">
+            <div class="form" id="accept">
+                <label asp-for="Acceptenc" class="exampleFormControlInput1">Acceptenc</label>
+                <input type="text" asp-for="Acceptenc" class="form-control" placeholder="Acceptenc " maxlength="10" />
+
+                <span asp-validation-for="Acceptenc"></span>
+            </div>
+        </div>
+        <div class="divworkname">
+            <div class="form" id="workname">
+                <label asp-for="WorkPlaceName" class="exampleFormControlInput1">WorkName</label>
+                <input type="text" asp-for="WorkPlaceName" class="form-control" placeholder="WorkPlaceName " maxlength="70" />
+
+                <span asp-validation-for="WorkPlaceName"></span>
+            </div>
+        </div>
+        <div class="divjobtittel">
+            <div class="form" id="jobtit">
+                <label asp-for="Jobtittle" class="exampleFormControlInput1">Jobtittle</label>
+                <input type="text" asp-for="Jobtittle" class="form-control" placeholder="Jobtittle " maxlength="150" />
+
+                <span asp-validation-for="Jobtittle"></span>
+            </div>
+        </div>
+        <div class="divstartdate">
+            <div class="form" id="startdate">
+                <label asp-for="StartDate" class="exampleFormControlInput1">StartDate</label>
+                <input type="text" asp-for="StartDate" class="form-control" placeholder="StartDate " maxlength="40" />
+
+                <span asp-validation-for="StartDate"></span>
+            </div>
+        </div>
+        <div class="divenddate">
+            <div class="form" id="enddate">
+                <label asp-for="EndDate" class="exampleFormControlInput1">EndDate</label>
+                <input type="text" asp-for="EndDate" class="form-control" placeholder="EndDate" maxlength="40" />
+
+                <span asp-validation-for="EndDate"></span>
+            </div>
+        </div>
+        <div class="divlastright">
+            <div class="form" id="lastright">
+                <label asp-for="LastRight" class="exampleFormControlInput1">LastRight</label>
+                <input type="text" asp-for="LastRight" class="form-control" placeholder=" LastRight" maxlength="20" />
+
+                <span asp-validation-for="LastRight"></span>
+            </div>
+        </div>
+        <div class="divReasonForLeavingServeices">
+            <div class="form" id="reasonliv">
+                <label asp-for="ReasonForLeavingServeices" class="exampleFormControlInput1">ReasonForLeavingServeices</label>
+                <input type="text" asp-for="ReasonForLeavingServeices" class="form-control" placeholder="ReasonForLeavingServeices " maxlength="150" />
+
+                <span asp-validation-for="ReasonForLeavingServeices"></span>
+            </div>
+        </div>
+        <div class="divskill">
+            <div class="form" id="skill">
+                <label asp-for="Skill" class="exampleFormControlInput1">Skill</label>
+                <input type="text" asp-for="Skill" class="form-control" placeholder="Skill " maxlength="200" />
+
+                <span asp-validation-for="Skill"></span>
+            </div>
+        </div>
+        <div class="divsub">
+            <button type="submit" class="buttonsub" id="submit" onerror="eror()"><span class="spansub"></span>Submit</button>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".example1").pDatepicker({
+                    initialValueType: "gregorian",
+                    format: "YYYY/MM/DD",
+                    onSelect: "year"
+                });
+            });
+        </script>
+        <script src="~/js/site.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/persian-date@latest/dist/persian-date.min.js"></script>
+        <script src="https://unpkg.com/persian-datepicker@latest/dist/js/persian-datepicker.min.js"></script>
+        <script src="~/lib/jquery.unobtrusive-ajax.js"></script>
+    </form>
+    
+</body>
+</html>

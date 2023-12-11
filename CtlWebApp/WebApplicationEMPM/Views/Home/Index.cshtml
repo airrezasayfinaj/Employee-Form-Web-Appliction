@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" ,initial-scale="1.0" />
+    <link rel="stylesheet" href="~/css/Index.css" />
+    <title>side menu</title>
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li class="EMPM"><a asp-controller="People" asp-action="EMPM">EMPM</a></li>
+                    <li class="about"><a href="#">About</a></li>
+                    <li class="list"><a asp-controller="People" asp-action="List">List</a></li>
+                    <li class="login"><a href="#">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Employee Managment WebApp</h1>
+        <div>
+            <button type="button" asp-controller="People" asp-action="EMPM" onclick="location.href = '@Url.Action("EMPM","People")'"><span></span>EMPM</button>
+            <button type="button" asp-controller="People" asp-action="Index" onclick="location.href='@Url.Action("List","People")'"><span></span>List</button>
+        </div>
+    </div>
+</body>

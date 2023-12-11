@@ -1,0 +1,484 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    background: linear-gradient(-135deg, #c850c0,#4158d0);
+}
+
+.center .avatar img {
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    margin-top: 5%;
+    object-fit: cover;
+    object-position: 0 -8px;
+}
+
+.center {
+    background-color: rgba(0,0,0,0.7);
+    height: 60vh;
+    border-radius: 5px;
+}
+
+table {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(32,32,32,.3);
+    background-color: #fafafa;
+    text-align: center;
+}
+
+tbody td {
+    border-bottom: 1px solid #282828;
+    padding: 12px 15px;
+}
+
+td {
+    background: white;
+    color: black;
+    text-transform: uppercase;
+}
+
+img {
+    border-radius: 50%;
+    width: 300px;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 600px;
+    width: 1000px;
+    display: flex;
+    box-shadow: 0 1px 20px 0 rgba(69,90,100,.08);
+}
+
+    .wrapper .left {
+        width: 35%;
+        background: linear-gradient(to right,#01a9ac,#01dbdf);
+        padding: 30px 25px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        text-align: center;
+        color: #fff;
+    }
+
+        .wrapper .left img {
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .wrapper .left h4 {
+            margin-bottom: 10px;
+        }
+
+        .wrapper .left p {
+            font-size: 12px;
+        }
+
+    .wrapper .right {
+        width: 65%;
+        background: #fff;
+        padding: 30px 25px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+        .wrapper .right .info,
+        .wrapper .right .projects {
+            margin-bottom: 25px;
+        }
+
+            .wrapper .right .info h3,
+            .wrapper .right .projects h3 {
+                margin-bottom: 15px;
+                padding-bottom: 5px;
+                border-bottom: 1px solid #e0e0e0;
+                color: #353c4e;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+            }
+
+        .wrapper .right .info_data,
+        .wrapper .right .projects_data {
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .wrapper .right .info_data .data,
+            .wrapper .right .projects_data .data {
+                width: 45%;
+            }
+
+                .wrapper .right .info_data .data .h4NationalCode,
+                .wrapper .right .projects_data .data .h4NationalCode {
+                    display: flex;
+                    position: relative;
+                    left: 50px;
+                    color: #353c4e;
+                    margin-bottom: 5px;
+                }
+
+                .wrapper .right .info_data .data .pNationalCode,
+                .wrapper .right .projects_data .data .pNationalCode {
+                    font-size: 13px;
+                    margin-bottom: 10px;
+                    color: #919aa3;
+                    display: flex;
+                    position: relative;
+                    left: 80px;
+                }
+
+                .wrapper .right .info_data .data .h4IdentityNumber,
+                .wrapper .right .projects_data .data .h4IdentityNumber {
+                    left: 100px;
+                    display: flex;
+                    position: relative;
+                    color: #353c4e;
+                    margin-bottom: 5px;
+                }
+
+                .wrapper .right .info_data .data .pIdentityNumber,
+                .wrapper .right .projects_data .data .pIdentityNumber {
+                    font-size: 13px;
+                    margin-bottom: 10px;
+                    color: #919aa3;
+                    display: flex;
+                    position: relative;
+                    left: 130px;
+                }
+
+                .wrapper .right .info_data .data .h4BirthDate,
+                .wrapper .right .projects_data .data .h4BirthDate {
+                    top:300px;
+                    right: 50px;
+                    display: flex;
+                    position: relative;
+                    color: #353c4e;
+                    margin-bottom: 5px;
+                }
+
+                .wrapper .right .info_data .data .pBirthDate,
+                .wrapper .right .projects_data .data .pBirthDate {
+                    font-size: 13px;
+                    margin-bottom: 10px;
+                    color: #919aa3;
+                    display: flex;
+                    position: relative;
+                    top:300px;
+                    right: 30px;
+                }
+
+                .wrapper .right .info_data .data .h4BirthPlace,
+                .wrapper .right .projects_data .data .h4BirthPlace {
+                    top: 100px;
+                    right: 475px;
+                    display: flex;
+                    position: relative;
+                    color: #353c4e;
+                    margin-bottom: 5px;
+                    right:600px;
+                }
+
+                .wrapper .right .info_data .data .pBirthPlace,
+                .wrapper .right .projects_data .data .pBirthPlace {
+                    font-size: 13px;
+                    margin-bottom: 10px;
+                    color: #919aa3;
+                    display: flex;
+                    position: relative;
+                    top: 110px;
+                    right: 570px;
+                }
+
+                .wrapper .right .info_data .data .h4NameOfFather,
+                .wrapper .right .projects_data .data .h4NameOfFather {
+                    display: flex;
+                    position: relative;
+                    color: #353c4e;
+                    margin-bottom: 5px;
+                    top: 100px;
+                    right: 500px;
+                }
+
+                .wrapper .right .info_data .data .pNameOfFather,
+                .wrapper .right .projects_data .data .pNameOfFather {
+                    font-size: 13px;
+                    margin-bottom: 10px;
+                    color: #919aa3;
+                    display: flex;
+                    position: relative;
+                    right: 440px;
+                    top: 110px;
+                }
+
+                .wrapper .right .info_data .data .h4DateOfDispatch,
+                .wrapper .right .projects_data .data .h4DateOfDispatch {
+                    display: flex;
+                    position: relative;
+                    color: #353c4e;
+                    margin-bottom: 5px;
+                    top: 100px;
+                    right: 430px;
+                }
+
+                .wrapper .right .info_data .data .pDateOfDispatch,
+                .wrapper .right .projects_data .data .pDateOfDispatch {
+                    font-size: 13px;
+                    margin-bottom: 10px;
+                    color: #919aa3;
+                    display: flex;
+                    position: relative;
+                    top: 110px;
+                    right: 410px;
+                }
+
+                .wrapper .right .info_data .data .h4Releasedate,
+                .wrapper .right .projects_data .data .h4Releasedate {
+                    display: flex;
+                    position: relative;
+                    color: #353c4e;
+                    margin-bottom: 5px;
+                    top: 400px;
+                    right: 1030px;
+                }
+
+                .wrapper .right .info_data .data .pReleasedate,
+                .wrapper .right .projects_data .data .pReleasedate {
+                    font-size: 13px;
+                    margin-bottom: 10px;
+                    color: #919aa3;
+                    display: flex;
+                    position: relative;
+                    top: 410px;
+                    right: 1030px;
+                }
+
+                .wrapper .right .info_data .data .h4Acceptenc,
+                .wrapper .right .projects_data .data .h4Acceptenc {
+                    display: flex;
+                    position: relative;
+                    color: #353c4e;
+                    margin-bottom: 5px;
+                    top: 200px;
+                    right: 1170px;
+                }
+
+                .wrapper .right .info_data .data .pAcceptenc,
+                .wrapper .right .projects_data .data .pAcceptenc {
+                    font-size: 13px;
+                    margin-bottom: 10px;
+                    color: #919aa3;
+                    display: flex;
+                    position: relative;
+                    top: 210px;
+                    right: 1120px;
+                }
+
+                .wrapper .right .info_data .data .h4Skill,
+                .wrapper .right .projects_data .data .h4Skill {
+                    display: flex;
+                    position: relative;
+                    color: #353c4e;
+                    margin-bottom: 5px;
+                    top: 200px;
+                    right: 1100px;
+                }
+
+                .wrapper .right .info_data .data .pSkill,
+                .wrapper .right .projects_data .data .pSkill {
+                    font-size: 13px;
+                    margin-bottom: 10px;
+                    color: #919aa3;
+                    display: flex;
+                    position: relative;
+                    right: 1100px;
+                    top: 210px;
+                }
+
+                .wrapper .right .info_data .data .h4VerficationCode,
+                .wrapper .right .projects_data .data .h4VerficationCode {
+                    display: flex;
+                    position: relative;
+                    color: #353c4e;
+                    margin-bottom: 5px;
+                    top: 200px;
+                    right: 1050px;
+                }
+
+                .wrapper .right .info_data .data .pVerficationCode,
+                .wrapper .right .projects_data .data .pVerficationCode {
+                    font-size: 13px;
+                    margin-bottom: 10px;
+                    color: #919aa3;
+                    display: flex;
+                    position: relative;
+                    right: 1000px;
+                    top: 210px;
+                }
+
+                .wrapper .right .info_data .data .h4Address,
+                .wrapper .right .projects_data .data .h4Address {
+                    display: flex;
+                    position: relative;
+                    color: #353c4e;
+                    margin-bottom: 5px;
+                    top: 200px;
+                    right: 1000px;
+                }
+
+                .wrapper .right .info_data .data .pAddress,
+                .wrapper .right .projects_data .data .pAddress {
+                    font-size: 13px;
+                    margin-bottom: 10px;
+                    color: #919aa3;
+                    display: flex;
+                    position: relative;
+                    right: 970px;
+                    top: 210px;
+                }
+
+                .wrapper .right .info_data .data .h4Avenue,
+                .wrapper .right .projects_data .data .h4Avenue {
+                    display: flex;
+                    position: relative;
+                    color: #353c4e;
+                    margin-bottom: 5px;
+                    top: 300px;
+                    right: 1300px;
+                }
+
+                .wrapper .right .info_data .data .pAvenue,
+                .wrapper .right .projects_data .data .pAvenue {
+                    font-size: 13px;
+                    margin-bottom: 10px;
+                    color: #919aa3;
+                    display: flex;
+                    position: relative;
+                    right: 1290px;
+                    top: 310px;
+                }
+
+                .wrapper .right .info_data .data .h4Street,
+                .wrapper .right .projects_data .data .h4Street {
+                    display: flex;
+                    position: relative;
+                    color: #353c4e;
+                    margin-bottom: 5px;
+                    top: 300px;
+                    right: 1675px;
+                }
+
+                .wrapper .right .info_data .data .pStreet,
+                .wrapper .right .projects_data .data .pStreet {
+                    font-size: 13px;
+                    margin-bottom: 10px;
+                    color: #919aa3;
+                    display: flex;
+                    position: relative;
+                    right: 1660px;
+                    top: 310px;
+                }
+
+                .wrapper .right .info_data .data .h4number,
+                .wrapper .right .projects_data .data .h4number {
+                    top: 300px;
+                    right: 1600px;
+                    display: flex;
+                    position: relative;
+                    color: #353c4e;
+                    margin-bottom: 5px;
+                }
+
+                .wrapper .right .info_data .data .pnumber,
+                .wrapper .right .projects_data .data .pnumber {
+                    font-size: 13px;
+                    margin-bottom: 10px;
+                    color: #919aa3;
+                    display: flex;
+                    position: relative;
+                    right: 1570px;
+                    top: 310px;
+                }
+
+
+    .wrapper .social_media ul {
+        display: flex;
+    }
+
+        .wrapper .social_media ul li {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(to right,#01a9ac,#01dbdf);
+            margin-right: 10px;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 45px;
+        }
+
+            .wrapper .social_media ul li a {
+                color: #fff;
+                display: block;
+                font-size: 18px;
+            }
+
+    .wrapper .right .info_data .data pnumber,
+    .wrapper .right .projects_data .data pnumber {
+        display: flex;
+        position: relative;
+        right: 200px;
+        font-size: 13px;
+        margin-bottom: 10px;
+        color: #919aa3;
+    }
+button {
+    top:500px;
+    left:700px;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span {
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span {
+    width: 100%;
+}
+
+button:hover {
+    border: none;
+}

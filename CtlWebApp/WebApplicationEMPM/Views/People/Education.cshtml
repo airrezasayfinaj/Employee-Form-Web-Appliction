@@ -1,0 +1,91 @@
+﻿@model WebApplicationEMPM.Models.AddNewEducationModel
+@{
+
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" ,initial-scale="1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/persian-datepicker@latest/dist/css/persian-datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/EMPM.css" />
+    <title>Education Menu</title>
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="#" onclick="location.href='@Url.Action("Index","Home")'">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a asp-controller="People" asp-action="List">List</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+    <form asp-action="Education" asp-controller="People"
+          method="post"
+          enctype="multipart/form-data">
+
+        <input asp-for="Id" id="StudentId"
+               name="StudentId"
+               type="hidden"
+               value="@Model.Id" />
+        <div class="tablediv">
+            <table class="table table-bordered" id="dynamic_field">
+                <tr>
+                    <td><label asp-for="city" class="exampleFormControlInput1">Eductionplace</label></td>
+                    <td><label asp-for="TotalAverage" class="exampleFormControlInput1">TotalAverage</label></td>
+                    <td><label asp-for="DateReceived" class="exampleFormControlInput1">DateReceived</label></td>
+                    <td><label asp-for="Orientaion" class="exampleFormControlInput1">Orientaion</label></td>
+                    <td><label asp-for="FeildOfStudy" class="exampleFormControlInput1">FeildOfStudy</label></td>
+                    <td><label asp-for="Education" class="exampleFormControlInput1">Education</label></td>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td><input type="text" asp-for="city" class="form-control" placeholder=" " maxlength="150" /></td>
+                        <td><input type="text" asp-for="TotalAverage" class="form-control" placeholder=" " maxlength="2" /></td>
+                        <td><input type="text" asp-for="DateReceived" class="example1 form-control" placeholder=" " maxlength="40" /></td>
+                        <td><input type="text" asp-for="Orientaion" class="form-control" placeholder=" " maxlength="200" /></td>
+                        <td><input type="text" asp-for="FeildOfStudy" class="form-control" placeholder=" " maxlength="50" /></td>
+                        <td>
+                            <select class="form-control form-control-sm" asp-for="Education" asp-items="Html.GetEnumSelectList<CtlWebApp.Contract.Educatuions>()">
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="divaddsub"><button type="button" name="add" class="buttonsub" id="add"><span class="spansub"></span>Add a table</button></div>
+        <script type="text/javascript">
+            onErro = function eror(e) {
+                alert(e.responseText);
+            }
+            $(document).ready(function () {
+                var i = 1;
+                $('#add').click(function () {
+                    i++;
+                    $('#dynamic_field').append('<tr id="row' + i + '"><td><input type="text" class="form-control name_list" /></td></tr>');
+                });
+                $(document).ready(function () {
+                    $(".example1").pDatepicker({
+                        initialValueType: "gregorian",
+                        format: "YYYY/MM/DD",
+                        onSelect: "year"
+                    });
+                });
+        </script>
+        <script src="~/js/site.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/persian-date@latest/dist/persian-date.min.js"></script>
+        <script src="https://unpkg.com/persian-datepicker@latest/dist/js/persian-datepicker.min.js"></script>
+        <script src="~/lib/jquery.unobtrusive-ajax.js"></script>
+        <button type="submit"><span class="spansub"></span>Next</button>
+    </form>
+    
+
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+﻿@model WebApplicationEMPM.Models.AddNewMilitaryServiceStatusModel
+@{
+
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" ,initial-scale="1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/persian-datepicker@latest/dist/css/persian-datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/EMPM.css" />
+    <title>MilitaryServiceStatus Menu</title>
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="#" onclick="location.href='@Url.Action("Index","Home")'">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a asp-controller="People" asp-action="List">List</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+    <form asp-action="MilitaryServiceStatus" asp-controller="People"
+          method="post"
+          enctype="multipart/form-data">
+
+        <input asp-for="Id" id="StudentId"
+               name="StudentId"
+               type="hidden"
+               value="@Model.Id" />
+        <div class="divdateofdispatch">
+            <div class="form" id="dateofdispatch">
+                <label asp-for="DateOfDispatch" class="exampleFormControlInput1">DateOfDispatch</label>
+                <input type="text" asp-for="DateOfDispatch" class="example1 form-control" placeholder="DateOfDispatch" maxlength="40" />
+
+                <span asp-validation-for="DateOfDispatch"></span>
+            </div>
+        </div>
+        <div class="divaddressstateofwazifa">
+            <div class="divselectgrndr" id="stateowazifa">
+                <select class="selectg" asp-for="varzifaState" asp-items="Html.GetEnumSelectList<CtlWebApp.Contract.VazifeStates>()">
+                </select>
+            </div>
+        </div>
+        <div class="divbirthcertificate">
+            <div class="form" id="IdentityNumber">
+                <label asp-for="IdentityNumber" class="exampleFormControlInput1">IdentityNumber</label>
+                <input type="text" asp-for="IdentityNumber" class="form-control" placeholder="IdentityNumber " maxlength="10" />
+
+                <span asp-validation-for="IdentityNumber"></span>
+            </div>
+        </div>
+        <div class="divrelesedate">
+            <div class="form" id="relesdate">
+                <label asp-for="Releasedate" class="exampleFormControlInput1">Releasedate</label>
+                <input type="text" asp-for="Releasedate" class="example1 form-control" placeholder="Releasedate " maxlength="40" />
+
+                <span asp-validation-for="Releasedate"></span>
+            </div>
+        </div>
+        <button type="submit"><span class="spansub"></span>Next</button>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".example1").pDatepicker({
+                    initialValueType: "gregorian",
+                    format: "YYYY/MM/DD",
+                    onSelect: "year"
+                });
+            });
+        </script>
+        <script src="~/js/site.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/persian-date@latest/dist/persian-date.min.js"></script>
+        <script src="https://unpkg.com/persian-datepicker@latest/dist/js/persian-datepicker.min.js"></script>
+        <script src="~/lib/jquery.unobtrusive-ajax.js"></script>
+    </form>
+   
+</body>
+</html>

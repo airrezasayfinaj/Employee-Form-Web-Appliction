@@ -1,0 +1,12 @@
+C:\Users\Castel\Desktop\Ctl\CtlWebApp\CtlWebApp.Contract\bin\Debug\net5.0\CtlWebApp.Contract.deps.json
+C:\Users\Castel\Desktop\Ctl\CtlWebApp\CtlWebApp.Contract\bin\Debug\net5.0\CtlWebApp.Contract.dll
+C:\Users\Castel\Desktop\Ctl\CtlWebApp\CtlWebApp.Contract\bin\Debug\net5.0\ref\CtlWebApp.Contract.dll
+C:\Users\Castel\Desktop\Ctl\CtlWebApp\CtlWebApp.Contract\bin\Debug\net5.0\CtlWebApp.Contract.pdb
+C:\Users\Castel\Desktop\Ctl\CtlWebApp\CtlWebApp.Contract\obj\Debug\net5.0\CtlWebApp.Contract.csproj.AssemblyReference.cache
+C:\Users\Castel\Desktop\Ctl\CtlWebApp\CtlWebApp.Contract\obj\Debug\net5.0\CtlWebApp.Contract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Castel\Desktop\Ctl\CtlWebApp\CtlWebApp.Contract\obj\Debug\net5.0\CtlWebApp.Contract.AssemblyInfoInputs.cache
+C:\Users\Castel\Desktop\Ctl\CtlWebApp\CtlWebApp.Contract\obj\Debug\net5.0\CtlWebApp.Contract.AssemblyInfo.cs
+C:\Users\Castel\Desktop\Ctl\CtlWebApp\CtlWebApp.Contract\obj\Debug\net5.0\CtlWebApp.Contract.csproj.CoreCompileInputs.cache
+C:\Users\Castel\Desktop\Ctl\CtlWebApp\CtlWebApp.Contract\obj\Debug\net5.0\CtlWebApp.Contract.dll
+C:\Users\Castel\Desktop\Ctl\CtlWebApp\CtlWebApp.Contract\obj\Debug\net5.0\ref\CtlWebApp.Contract.dll
+C:\Users\Castel\Desktop\Ctl\CtlWebApp\CtlWebApp.Contract\obj\Debug\net5.0\CtlWebApp.Contract.pdb

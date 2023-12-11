@@ -1,0 +1,154 @@
+﻿@model CtlWebApp.Core.People.Person
+@{
+    ViewData["Title"] = "Edit";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" ,initial-scale="1.0" />
+    <link rel="stylesheet" href="~/css/Edit.css" />
+    <title>side menu</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left">
+            <img src="data:image/jpeg;base64,@(Convert.ToBase64String(Model.Image))" alt="face" />
+            <h4>@Html.DisplayFor(modelItem => modelItem.FirstName)</h4>
+            <p>@Html.DisplayFor(modelItem => modelItem.LastName)</p>
+        </div>
+        <div class="right">
+            <div class="info">
+                <h3>Information</h3>
+                <div class="info_data">
+                    <div class="data">
+                        <h4>Email</h4>
+                        <p>@Html.DisplayFor(modelItem => modelItem.Email)</p>
+                    </div>
+                    <div class="data">
+                        <h4>Phone</h4>
+                        <p>@Html.DisplayFor(modelItem => modelItem.PhoneNumber)</p>
+                    </div>
+                    <div class="data">
+                        <h4 class="h4NationalCode">NationalCode</h4>
+                        <p class="pNationalCode">@Html.DisplayFor(modelItem => modelItem.NationalCode)</p>
+                    </div>
+                    <div class="data">
+                        <h4 class="h4IdentityNumber">IdentityNumber</h4>
+                        <p class="pIdentityNumber">@Html.DisplayFor(modelItem => modelItem.IdentityNumber)</p>
+                    </div>
+                    <div class="data">
+                        <h4 class="h4BirthDate">BirthDate</h4>
+                        <p class="pBirthDate">@Html.DisplayFor(modelItem => modelItem.BirthDate)</p>
+                    </div>
+
+                    <div class="data">
+                        <h4 class="h4BirthPlace">BirthPlace</h4>
+                        <p class="pBirthPlace">@Html.DisplayFor(modelItem => modelItem.BirthPlace)</p>
+                    </div>
+                    <div class="data">
+                        <h4 class="h4NameOfFather">NameOfFather</h4>
+                        <p class="pNameOfFather">@Html.DisplayFor(modelItem => modelItem.NameOfFather)</p>
+                    </div>
+                    <div class="data">
+                        <h4 class="h4DateOfDispatch">DateOfDispatch</h4>
+                        <p class="pDateOfDispatch">@Html.DisplayFor(modelItem => modelItem.DateOfDispatch)</p>
+                    </div>
+                    <div class="data">
+                        <h4 class="h4Releasedate">Releasedate</h4>
+                        <p class="pReleasedate">@Html.DisplayFor(modelItem => modelItem.Releasedate)</p>
+                    </div>
+
+                    <div class="data">
+                        <h4 class="h4Acceptenc">Acceptenc</h4>
+                        <p class="pAcceptenc">@Html.DisplayFor(modelItem => modelItem.Acceptenc)</p>
+                    </div>
+                    <div class="data">
+                        <h4 class="h4Skill">Skill</h4>
+                        <p class="pSkill">@Html.DisplayFor(modelItem => modelItem.Skill)</p>
+                    </div>
+                    <div class="data">
+                        <h4 class="h4VerficationCode">VerficationCode</h4>
+                        <p class="pVerficationCode">@Html.DisplayFor(modelItem => modelItem.VerficationCode)</p>
+                    </div>
+                    <div class="data">
+                        <h4 class="h4Address">Address</h4>
+                        <p class="pAddress">@Html.DisplayFor(modelItem => modelItem.Address)</p>
+                    </div>
+                    <div class="data">
+                        <h4 class="h4Avenue">Avenue</h4>
+                        <p class="pAvenue">@Html.DisplayFor(modelItem => modelItem.Avenue)</p>
+                    </div>
+
+                    <div class="data">
+                        <h4 class="h4Street">Street</h4>
+                        <p class="pStreet">@Html.DisplayFor(modelItem => modelItem.Street)</p>
+                    </div>
+                    <div class="data">
+                        <h4 class="h4number">Number</h4>
+                        <p class="pnumber">@Html.DisplayFor(modelItem => modelItem.Number)</p>
+                    </div>
+                    <div class="filter">
+
+                    </div>
+                    @foreach (var t in Model.educationsHistory)
+                    {
+                        <table border="1" class="content_tbl edit">
+                            <tr>
+                                <td>Orientaion</td>
+                                <td>TotalAverage</td>
+                                <td>FeildOfStudy</td>
+                                <td>Educatuion</td>
+                                <td>DateReceived</td>
+                                <td>city</td>
+                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td>@t.Orientaion</td>
+                                    <td>@t.TotalAverage.ToString()</td>
+                                    <td>@t.FeildOfStudy</td>
+                                    <td>@t.Educatuion.ToString()</td>
+                                    <td>@t.DateReceived.ToString()</td>
+                                    <td>@t.city.ToString()</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    }
+                    <div class="filter">
+
+                    </div>
+                    @foreach (var t in Model.workHistories)
+                    {
+                        <table border="1" class="content_tbl edit1">
+                            <tr>
+                                <td>EndDate</td>
+                                <td>Jobtittle</td>
+                                <td>LastRight</td>
+                                <td>StartDate</td>
+                                <td>ReasonForLeavingServeices</td>
+                                <td>WorkPlaceName</td>
+                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td>@t.EndDate</td>
+                                    <td>@t.Jobtittle.ToString()</td>
+                                    <td>@t.LastRight</td>
+                                    <td>@t.StartDate.ToString()</td>
+                                    <td>@t.ReasonForLeavingServeices.ToString()</td>
+                                    <td>@t.WorkPlaceName.ToString()</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
